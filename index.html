@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Samuel Reutcky" />
+    <meta name="description" content="My Web Project" />
+    <meta name="keywords" content="html, css, seo, web devlopment" />
+    <title>Wizards of the Keyboard</title>
+    <link rel="icon" href="./src/img/favicon.svg" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mrspecht/cdn/reset.css" media="all" />
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <script src="./src/js/script.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <div class="yt-container">
+        <iframe
+          src="https://www.youtube.com/embed/JbiF-SUHx28?autoplay=1&controls=0&mute=1&modestbranding=1&showinfo=0&si=ACTlkX18ArXwae4L"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        >
+        </iframe>
+      </div>
+      <section>
+        <div class="container flex flex-column flex-center">
+          <img
+            class="title"
+            src="./src/img/wizards-of-the-keyboard.png"
+            alt="Wizards of the Keyboard"
+          />
+          <div class="timer flex flex-column flex-center">
+            <i class="fa-solid fa-stopwatch"></i>
+            <p class="time">---</p>
+          </div>
+          <div class="display"></div>
+          <p class="hits"><span class="hit-counter">0</span> HITS</p>
+          <input type="text" placeholder="Press START to play" class="input" />
+          <button class="start">START</button>
+        </div>
+        <p class="copyright">Created by Samuel Reutcky</p>
+      </section>
+      <audio class="gameMusic" loop>
+        <source src="./src/audio/battle-music.mp3" type="audio/mp3" />
+        Your browser does not support the audio element.
+      </audio>
+      <audio
+        id="correct-sound"
+        src="./src/audio/sword-sound.mp3"
+        preload="auto"
+      ></audio>
+    </main>
+  </body>
+</html>
