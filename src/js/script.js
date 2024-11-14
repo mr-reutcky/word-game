@@ -144,8 +144,9 @@ function startGame() {
 function gameOver() {
   time.innerText = '---';
   input.disabled = true;
+  input.value = '';
   input.placeholder = 'Game Over!';
-  start.textContent = 'RESTART';
+  start.textContent = 'START';
   input.style.backgroundColor = '#ca6262';
   gameStarted = false;
   display.textContent = '';
