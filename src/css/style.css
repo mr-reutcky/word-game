@@ -1,20 +1,21 @@
 @charset "utf-8";
 
-input::placeholder {
+/* Used Stackoverflow to get this code, couldnt get it to work with my own code */
+::placeholder {
   color: white; /* Change placeholder text to white */
 }
 
-input::-webkit-input-placeholder {
+::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
   color: white;
 }
 
-input::-moz-placeholder {
+::-moz-placeholder {
   /* Firefox */
   color: white;
 }
 
-input:-ms-input-placeholder {
+:-ms-input-placeholder {
   /* Internet Explorer */
   color: white;
 }
@@ -45,6 +46,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+  user-select: none;
 }
 
 .yt-container {
@@ -78,7 +80,7 @@ section {
   z-index: 9999;
 
   .title {
-    margin-top: 20px;
+    margin-top: 25px;
     width: 300px;
   }
 
@@ -144,7 +146,7 @@ section {
   }
 
   .copyright {
-    margin-top: 30px;
+    margin-top: 20px;
     color: #b1b1b1;
     font-size: 1.4rem;
     text-align: center;
