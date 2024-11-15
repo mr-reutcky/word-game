@@ -52,7 +52,7 @@ const display = select('.display');
 const hitCounter = select('.hit-counter');
 
 let gameStarted = false;
-let timeLeft = 30;
+let timeLeft = 99;
 let timerInterval;
 let wordToType = '';
 let correctHits = 0;
@@ -120,7 +120,7 @@ function startGame() {
 
   correctHits = 0;
   hitCounter.textContent = correctHits;
-  timeLeft = 30;
+  // timeLeft = 99;
   time.textContent = timeLeft;
 
   wordToType = pickRandomWord(availableWords);
@@ -154,7 +154,7 @@ function gameOver() {
   stopMusic();
 }
 
-function showRestartingMessage() {
+function restartGame() {
   input.placeholder = 'Restarting...';
   input.style.backgroundColor = '#ca6262';
   time.innerText = '---';
@@ -168,7 +168,7 @@ function showRestartingMessage() {
 
 listen('click', start, function () {
   if (gameStarted) {
-    showRestartingMessage();
+    restartGame();
     setTimeout(() => {
       startGame();
     }, 2000);
