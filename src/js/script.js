@@ -120,7 +120,7 @@ function startGame() {
 
   correctHits = 0;
   hitCounter.textContent = correctHits;
-  // timeLeft = 99;
+  timeLeft = 99;
   time.textContent = timeLeft;
 
   wordToType = pickRandomWord(availableWords);
