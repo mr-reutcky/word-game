@@ -274,7 +274,7 @@ function pickRandomWord(array) {
   return pickedWord;
 }
 
-function updateDisplay() {
+function isTextCorrect() {
   const inputValue = input.value.toLowerCase();
   let displayText = wordToType;
 
@@ -375,7 +375,7 @@ listen('click', start, function () {
 });
 
 listen('keyup', input, function () {
-  updateDisplay();
+  isTextCorrect();
 
   if (input.value.toLowerCase() === wordToType.toLowerCase()) {
     correctHits++;
