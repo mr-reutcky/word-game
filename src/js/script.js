@@ -106,8 +106,8 @@ function pickRandomWord(array) {
 }
 
 function isTextCorrect() {
-  const inputValue = input.value.toLowerCase();
-  let displayText = wordToType;
+  const inputValue = input.value.toLowerCase().trim();
+  let displayText = wordToType.trim();
 
   let updatedText = '';
   for (let i = 0; i < displayText.length; i++) {
@@ -207,7 +207,7 @@ listen('click', start, function () {
 listen('keyup', input, function () {
   isTextCorrect();
 
-  if (input.value.toLowerCase() === wordToType.toLowerCase()) {
+  if (input.value.toLowerCase().trim() === wordToType.toLowerCase().trim()) {
     correctHits++;
     hitCounter.textContent = correctHits;
     correctSound.play();
