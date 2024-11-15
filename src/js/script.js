@@ -139,7 +139,7 @@ function startGame() {
   input.style.backgroundColor = 'rgba(25, 15, 45, 0.8)';
 
   input.value = '';
-  input.placeholder = 'Type the word...';
+  input.placeholder = 'Start typing...';
   start.textContent = 'RESTART';
 
   correctHits = 0;
