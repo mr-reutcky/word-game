@@ -305,7 +305,7 @@ function startGame() {
 
   gameStarted = true;
   input.disabled = false;
-  input.style.backgroundColor = '#5f4b8b';
+  input.style.backgroundColor = 'rgba(25, 15, 45, 0.8)';
 
   input.value = '';
   input.placeholder = 'Type the word...';
