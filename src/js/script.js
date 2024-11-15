@@ -189,9 +189,8 @@ function restartGame() {
   display.innerText = '';
 
   input.disabled = false;
-
-  stopMusic();
   time.style.opacity = 0;
+  stopMusic();
 }
 
 listen('click', start, function () {
