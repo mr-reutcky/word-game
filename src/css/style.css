@@ -67,7 +67,19 @@ main {
   }
 }
 
+@keyframes slideDownFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-1000px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 section {
+  opacity: 0;
   width: 300px;
   height: 550px;
   background: linear-gradient(
@@ -78,6 +90,8 @@ section {
   );
   border-radius: 5px;
   z-index: 9999;
+
+  animation: slideDownFadeIn 2.75s ease-in-out 2.75s forwards;
 
   .title {
     margin-top: 25px;
@@ -105,7 +119,7 @@ section {
   .display {
     margin-top: 60px;
     color: #fff;
-    font-size: 3rem;
+    font-size: 3.5rem;
     width: 250px;
     height: 80px;
     line-height: 80px;
