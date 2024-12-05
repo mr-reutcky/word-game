@@ -1,0 +1,16 @@
+{
+  "name": "word-game",
+  "version": "1.0.0",
+  "description": "Welcome to **Wizards of the Keyboard**! This browser-based game challenges players to test and expand their vocabulary by guessing words within a limited timeframe. Built with HTML, CSS, and JavaScript, the game provides an engaging experience for players of all ages.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "lite-server"
+  },
+  "keywords": ["Words", "Game", "Vocabulary", "Browser", "HTML", "CSS", "JavaScript"],
+  "author": "Samuel Reutcky",
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
