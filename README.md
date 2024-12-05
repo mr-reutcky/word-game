@@ -1,6 +1,6 @@
-# Word Game
+# Wizards of the Keyboard
 
-Welcome to **Word Game**! This browser-based game challenges players to test and expand their vocabulary by guessing words within a limited timeframe. Built with HTML, CSS, and JavaScript, the game provides an engaging experience for players of all ages.
+Welcome to **Wizards of the Keyboard**! This browser-based game challenges players to test and expand their vocabulary by guessing words within a limited timeframe. Built with HTML, CSS, and JavaScript, the game provides an engaging experience for players of all ages.
 
 ## Features
 
