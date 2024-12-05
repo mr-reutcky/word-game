@@ -70,7 +70,7 @@ main {
 @keyframes slideDownFadeIn {
   0% {
     opacity: 0;
-    transform: translateY(-1000px);
+    transform: translateY(-50px);
   }
   100% {
     opacity: 1;
@@ -91,7 +91,7 @@ section {
   border-radius: 5px;
   z-index: 9999;
 
-  animation: slideDownFadeIn 2.75s ease-in-out 2.75s forwards;
+  animation: slideDownFadeIn 1s ease-in-out 2.75s forwards;
 
   .title {
     margin-top: 25px;
@@ -119,7 +119,7 @@ section {
   .display {
     margin-top: 60px;
     color: #fff;
-    font-size: 3.5rem;
+    font-size: 3.75rem;
     width: 250px;
     height: 80px;
     line-height: 80px;
