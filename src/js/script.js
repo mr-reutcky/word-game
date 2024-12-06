@@ -1,6 +1,7 @@
 'use strict';
 
 import { wordBank } from './word-bank.js';
+import { select, listen, getRandomNumber } from './utils.js';
 
 class Score {
   
@@ -27,14 +28,6 @@ class Score {
   }
 }
 
-function select(selector, scope = document) {
-  return scope.querySelector(selector);
-}
-
-function listen(event, selector, callback) {
-  return selector.addEventListener(event, callback);
-}
-
 const availableWords = [...wordBank];
 
 const time = select('.time');
@@ -45,10 +38,11 @@ const display = select('.display');
 const hitCounter = select('.hit-counter');
 
 let gameStarted = false;
-let timeLeft = 99;
+let timeLeft = 15;
 let timerInterval;
 let wordToType = '';
 let correctHits = 0;
+let shuffledWords = [];
 
 const correctSound = select('#correct-sound');
 
@@ -61,17 +55,6 @@ function playMusic() {
 function stopMusic() {
   gameMusic.pause();
   gameMusic.currentTime = 0;
-}
-
-function getRandomNumber(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-
-function pickRandomWord(array) {
-  const randomIndex = getRandomNumber(0, array.length - 1);
-  const pickedWord = array[randomIndex];
-  array.splice(randomIndex, 1);
-  return pickedWord;
 }
 
 function isTextCorrect() {
@@ -99,8 +82,6 @@ function startGame() {
 
   if (gameStarted) {
     clearInterval(timerInterval);
-    availableWords.length = 0;
-    availableWords.push(...wordBank);
   }
 
   gameStarted = true;
@@ -113,10 +94,11 @@ function startGame() {
 
   correctHits = 0;
   hitCounter.textContent = correctHits;
-  timeLeft = 99;
+  timeLeft = 15;
   time.textContent = timeLeft;
 
-  wordToType = pickRandomWord(availableWords);
+  shuffledWords = [...wordBank].sort(() => Math.random() - 0.5);
+  wordToType = shuffledWords.pop();
   display.textContent = wordToType;
 
   input.focus();
@@ -181,8 +163,8 @@ listen('keyup', input, function () {
     hitCounter.textContent = correctHits;
     correctSound.play();
 
-    if (availableWords.length > 0) {
-      wordToType = pickRandomWord(availableWords);
+    if (shuffledWords.length > 0) {
+      wordToType = shuffledWords.pop();
       display.textContent = wordToType;
       input.value = '';
       input.focus();
